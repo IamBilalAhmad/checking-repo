@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SONARQUBE_TOKEN = credentials('testing-jenkins')
+        SONARQUBE_TOKEN = credentials('sonarqube-jenkins-token')
     }
 
     stages {
@@ -10,7 +10,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/IamBilalAhmad/checking-repo.git',
-                    credentialsId: 'github-credentials-testing'
+                    credentialsId: 'jenkins-github-access'
             }
         }
 

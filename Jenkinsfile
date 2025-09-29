@@ -10,7 +10,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/IamBilalAhmad/checking-repo.git',
-                    credentialsId: 'jenkins-github-access'
+                    credentialsId: 'github-jenkins'
             }
         }
 
